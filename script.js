@@ -97,5 +97,6 @@ placemark.events.add('click', function () {
 });
 
 }
-
+var tg = window.Telegram.WebApp;
+tg.expand();
 
