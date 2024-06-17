@@ -44,25 +44,23 @@ body, html {
     flex-direction: column;
     max-width: 50%;
     max-height: 100px;
-    padding: 20px 0px 0px 20px;
+    padding: 20px 0px 0px 10px;
 }
 .text
 {
 
     font-family: 'Times New Roman', serif;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400px;
     right:22px;
     position: absolute;
-    width: 140px;
+    width: 40%;
     height: 70%;
     line-height: 22px;
     overflow: hidden;
 
 
 }
-
-.text
 [class*="copyrights-pane"] {
   display: none !important;
 }
