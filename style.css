@@ -40,7 +40,7 @@ body, html {
 }
 .block_img
 {
-    width: 200px;
+    max-width: 100%;
     height: 150px;
    background-size:cover;
 }
@@ -52,8 +52,7 @@ body, html {
 .item3
 {
     padding: 0px 10px 0px 10px;
-    max-width: 160px;
-    height: 15vh;
+    height: 14vh;
     overflow: hidden;
 }
 .item3 > p

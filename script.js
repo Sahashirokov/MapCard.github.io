@@ -3,9 +3,20 @@ ymaps.ready(init);
 function openCard(event)
 {
     const btn = event.target;
+    const currentimg =btn.closest('.block_img');
+
     const currentcard = btn.closest('.Card');
     const currentitem = currentcard.querySelector('.item3');
-    currentitem.style.height=`35vh`;
+    if(currentitem.style.height==`50vh`)
+        {
+            currentitem.style.height=`14vh`;
+            btn.src='expand.svg';
+        }
+    else{
+         btn.src='reduce.svg';
+          currentitem.style.height=`50vh`;
+    }
+
 
 }
 
@@ -30,7 +41,7 @@ for (let i = 0; i < 3; i++)
 
 placemark.events.add('click', function () {
 
-cardOpen();
+cardOpen(document.getElementsByClassName("Card")[1]);
 
 
     if(document.getElementsByClassName("Card")[1].style.display=='grid' || document.getElementsByClassName("Card")[2].style.display=='grid')
@@ -66,15 +77,18 @@ cardOpen();
 });
 
 }
-function cardOpen()
+function cardOpen(Card)
 {
+
     const Cards = document.querySelectorAll(".Card");
     Cards.forEach(function (card)
     {
          if(card.style.display=='none')
              {
                  let citem = card.querySelector('.item3');
-                 citem.style.height=`15vh`;
+                 let btn = card.querySelector('img');
+                 btn.src='expand.svg';
+                 citem.style.height=`14vh`;
              }
     });
 }
