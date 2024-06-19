@@ -7,14 +7,14 @@ function openCard(event)
 
     const currentcard = btn.closest('.Card');
     const currentitem = currentcard.querySelector('.item3');
-    if(currentitem.style.height==`50vh`)
+    if(currentitem.style.height==`60vh`)
         {
             currentitem.style.height=`14vh`;
             btn.src='expand.svg';
         }
     else{
          btn.src='reduce.svg';
-          currentitem.style.height=`50vh`;
+          currentitem.style.height=`60vh`;
     }
 
 
